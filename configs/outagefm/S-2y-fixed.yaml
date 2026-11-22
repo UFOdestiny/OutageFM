@@ -1,0 +1,9 @@
+# S-2y with a fixed update budget instead of a wall-clock budget (8,000 updates on the cosine length of 15,658
+# that S-2y measured): the reference model of the ensemble-selection score.
+extends: S-2y.yaml
+training:
+  schedule_from_seconds: false
+  schedule_updates: 15658
+  max_seconds: 1000000
+  max_updates: 8000
+output_dir: runs/S-2y-fixed

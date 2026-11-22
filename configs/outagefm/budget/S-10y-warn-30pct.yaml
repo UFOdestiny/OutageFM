@@ -1,0 +1,6 @@
+# Label budget (Appendix D.3): nested 30% subset of the ten-weather-year adaptation pool, defined by
+# deduplicated valid target slots in 28-day blocks (train-target30pct.parquet, scripts/build_label_budgets.py);
+# same initialization and update budget as OutageFM-S.
+extends: ../S-10y-warn.yaml
+training: {fewshot_fraction: 0.3}
+output_dir: runs/budget/S-10y-warn-30pct

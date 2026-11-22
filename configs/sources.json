@@ -1,0 +1,232 @@
+{
+  "description": "Public raw sources: EAGLE-I v4 outage records (figshare), Census county gazetteers, NOAA Storm Events (the file versions used for the frozen splits), IBTrACS v04r01 and NWS VTEC warnings. Entries under \"manual\" have no stable direct download link and must be placed at their path by hand.",
+  "files": [
+    {
+      "family": "eaglei",
+      "path": "datasets/raw/eaglei-v4/eaglei_outages_2025.csv",
+      "url": "https://ndownloader.figshare.com/files/62164877",
+      "bytes": 1402347695
+    },
+    {
+      "family": "eaglei",
+      "path": "datasets/raw/eaglei-v4/eaglei_outages_2014.csv",
+      "url": "https://ndownloader.figshare.com/files/42547717",
+      "bytes": 78056250
+    },
+    {
+      "family": "eaglei",
+      "path": "datasets/raw/eaglei-v4/eaglei_outages_2015.csv",
+      "url": "https://ndownloader.figshare.com/files/42547822",
+      "bytes": 598963737
+    },
+    {
+      "family": "eaglei",
+      "path": "datasets/raw/eaglei-v4/eaglei_outages_2016.csv",
+      "url": "https://ndownloader.figshare.com/files/42547825",
+      "bytes": 619779314
+    },
+    {
+      "family": "eaglei",
+      "path": "datasets/raw/eaglei-v4/eaglei_outages_2017.csv",
+      "url": "https://ndownloader.figshare.com/files/42547828",
+      "bytes": 698796929
+    },
+    {
+      "family": "eaglei",
+      "path": "datasets/raw/eaglei-v4/eaglei_outages_2018.csv",
+      "url": "https://ndownloader.figshare.com/files/42547879",
+      "bytes": 999210542
+    },
+    {
+      "family": "eaglei",
+      "path": "datasets/raw/eaglei-v4/eaglei_outages_2019.csv",
+      "url": "https://ndownloader.figshare.com/files/42547885",
+      "bytes": 1102778792
+    },
+    {
+      "family": "eaglei",
+      "path": "datasets/raw/eaglei-v4/eaglei_outages_2020.csv",
+      "url": "https://ndownloader.figshare.com/files/42547894",
+      "bytes": 1170699724
+    },
+    {
+      "family": "eaglei",
+      "path": "datasets/raw/eaglei-v4/eaglei_outages_2021.csv",
+      "url": "https://ndownloader.figshare.com/files/42547891",
+      "bytes": 1141058232
+    },
+    {
+      "family": "eaglei",
+      "path": "datasets/raw/eaglei-v4/eaglei_outages_2022.csv",
+      "url": "https://ndownloader.figshare.com/files/42547897",
+      "bytes": 1187596176
+    },
+    {
+      "family": "eaglei",
+      "path": "datasets/raw/eaglei-v4/eaglei_outages_2023.csv",
+      "url": "https://ndownloader.figshare.com/files/44574907",
+      "bytes": 1199752423
+    },
+    {
+      "family": "eaglei",
+      "path": "datasets/raw/eaglei-v4/eaglei_outages_2024.csv",
+      "url": "https://ndownloader.figshare.com/files/53581661",
+      "bytes": 1444846424
+    },
+    {
+      "family": "census",
+      "path": "datasets/raw/census-gazetteer/2014_Gaz_counties_national.zip",
+      "url": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2014_Gazetteer/2014_Gaz_counties_national.zip",
+      "bytes": 134161
+    },
+    {
+      "family": "census",
+      "path": "datasets/raw/census-gazetteer/2018_Gaz_counties_national.zip",
+      "url": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2018_Gazetteer/2018_Gaz_counties_national.zip",
+      "bytes": 141599
+    },
+    {
+      "family": "census",
+      "path": "datasets/raw/census-gazetteer/2022_Gaz_counties_national.zip",
+      "url": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2022_Gazetteer/2022_Gaz_counties_national.zip",
+      "bytes": 141647
+    },
+    {
+      "family": "census",
+      "path": "datasets/raw/census-gazetteer/2025_Gaz_counties_national.zip",
+      "url": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_counties_national.zip",
+      "bytes": 138993
+    },
+    {
+      "family": "noaa_stormevents",
+      "path": "datasets/raw/noaa-stormevents/StormEvents_details-ftp_v1.0_d2014_c20260323.csv.gz",
+      "url": "https://www.ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/StormEvents_details-ftp_v1.0_d2014_c20260323.csv.gz",
+      "bytes": 11084754
+    },
+    {
+      "family": "noaa_stormevents",
+      "path": "datasets/raw/noaa-stormevents/StormEvents_details-ftp_v1.0_d2015_c20260323.csv.gz",
+      "url": "https://www.ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/StormEvents_details-ftp_v1.0_d2015_c20260323.csv.gz",
+      "bytes": 10041550
+    },
+    {
+      "family": "noaa_stormevents",
+      "path": "datasets/raw/noaa-stormevents/StormEvents_details-ftp_v1.0_d2016_c20260323.csv.gz",
+      "url": "https://www.ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/StormEvents_details-ftp_v1.0_d2016_c20260323.csv.gz",
+      "bytes": 9065715
+    },
+    {
+      "family": "noaa_stormevents",
+      "path": "datasets/raw/noaa-stormevents/StormEvents_details-ftp_v1.0_d2017_c20260519.csv.gz",
+      "url": "https://www.ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/StormEvents_details-ftp_v1.0_d2017_c20260519.csv.gz",
+      "bytes": 9340854
+    },
+    {
+      "family": "noaa_stormevents",
+      "path": "datasets/raw/noaa-stormevents/StormEvents_details-ftp_v1.0_d2018_c20260323.csv.gz",
+      "url": "https://www.ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/StormEvents_details-ftp_v1.0_d2018_c20260323.csv.gz",
+      "bytes": 9585982
+    },
+    {
+      "family": "noaa_stormevents",
+      "path": "datasets/raw/noaa-stormevents/StormEvents_details-ftp_v1.0_d2019_c20260323.csv.gz",
+      "url": "https://www.ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/StormEvents_details-ftp_v1.0_d2019_c20260323.csv.gz",
+      "bytes": 11602648
+    },
+    {
+      "family": "noaa_stormevents",
+      "path": "datasets/raw/noaa-stormevents/StormEvents_details-ftp_v1.0_d2020_c20260323.csv.gz",
+      "url": "https://www.ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/StormEvents_details-ftp_v1.0_d2020_c20260323.csv.gz",
+      "bytes": 10444606
+    },
+    {
+      "family": "noaa_stormevents",
+      "path": "datasets/raw/noaa-stormevents/StormEvents_details-ftp_v1.0_d2021_c20260323.csv.gz",
+      "url": "https://www.ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/StormEvents_details-ftp_v1.0_d2021_c20260323.csv.gz",
+      "bytes": 10563953
+    },
+    {
+      "family": "noaa_stormevents",
+      "path": "datasets/raw/noaa-stormevents/StormEvents_details-ftp_v1.0_d2022_c20260625.csv.gz",
+      "url": "https://www.ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/StormEvents_details-ftp_v1.0_d2022_c20260625.csv.gz",
+      "bytes": 11817849
+    },
+    {
+      "family": "noaa_stormevents",
+      "path": "datasets/raw/noaa-stormevents/StormEvents_details-ftp_v1.0_d2023_c20260323.csv.gz",
+      "url": "https://www.ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/StormEvents_details-ftp_v1.0_d2023_c20260323.csv.gz",
+      "bytes": 12888092
+    },
+    {
+      "family": "noaa_stormevents",
+      "path": "datasets/raw/noaa-stormevents/StormEvents_details-ftp_v1.0_d2024_c20260728.csv.gz",
+      "url": "https://www.ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/StormEvents_details-ftp_v1.0_d2024_c20260728.csv.gz",
+      "bytes": 12693243
+    },
+    {
+      "family": "noaa_stormevents",
+      "path": "datasets/raw/noaa-stormevents/StormEvents_details-ftp_v1.0_d2025_c20260819.csv.gz",
+      "url": "https://www.ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/StormEvents_details-ftp_v1.0_d2025_c20260819.csv.gz",
+      "bytes": 12585209
+    },
+    {
+      "family": "ibtracs",
+      "path": "datasets/raw/ibtracs-v04r01/ibtracs.NA.list.v04r01.csv",
+      "url": "https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/csv/ibtracs.NA.list.v04r01.csv",
+      "bytes": 57593323
+    },
+    {
+      "family": "ibtracs",
+      "path": "datasets/raw/ibtracs-v04r01/ibtracs.EP.list.v04r01.csv",
+      "url": "https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/csv/ibtracs.EP.list.v04r01.csv",
+      "bytes": 47276346
+    },
+    {
+      "family": "eaglei",
+      "path": "datasets/raw/eaglei-v4/DQI.csv",
+      "url": "https://ndownloader.figshare.com/files/42547705",
+      "bytes": 4338
+    },
+    {
+      "family": "eaglei",
+      "path": "datasets/raw/eaglei-v4/MCC.csv",
+      "url": "https://ndownloader.figshare.com/files/42547708",
+      "bytes": 40584
+    },
+    {
+      "family": "eaglei",
+      "path": "datasets/raw/eaglei-v4/coverage_history.csv",
+      "url": "https://ndownloader.figshare.com/files/42547714",
+      "bytes": 11965
+    },
+    {
+      "family": "nws_warnings",
+      "path": "datasets/raw/iem-vtec/2014_all.zip",
+      "url": "https://mesonet.agron.iastate.edu/pickup/wwa/2014_all.zip",
+      "bytes": 282315912
+    },
+    {
+      "family": "nws_warnings",
+      "path": "datasets/raw/iem-vtec/2025_all.zip",
+      "url": "https://mesonet.agron.iastate.edu/pickup/wwa/2025_all.zip",
+      "bytes": 345406299
+    }
+  ],
+  "manual": [
+    {
+      "family": "nws_warnings",
+      "path": "datasets/raw/eaglei-vtec-v2/NWS_WARNINGS_COMBINED_data_Updated.csv",
+      "source": "EAGLE-I NWS VTEC warnings 2015-2024, Zenodo, doi:10.5281/zenodo.22651795"
+    },
+    {
+      "family": "nws_warnings",
+      "path": "datasets/raw/nws-zone-county/bp18mr25.dbx",
+      "source": "NWS zone-county correlation file, version 18 March 2025 (https://www.weather.gov/gis/ZoneCounty)"
+    },
+    {
+      "family": "nws_warnings",
+      "path": "datasets/raw/nws-zone-county/bp16ap26.dbx",
+      "source": "NWS zone-county correlation file, version 16 April 2026 (https://www.weather.gov/gis/ZoneCounty)"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+# Local adaptation (Table 11): encoder of S-2y frozen; quantile, point and event heads updated on 30 days of
+# 2024 origins in FL.
+extends: ../S-2y.yaml
+training:
+  train_split: geo_adapt-12-30days
+  trainable_prefixes: [quantile_head., point_head., event_head.]
+  batch_size: 32
+  gradient_accumulation: 1
+  learning_rate: 0.0001
+  backbone_learning_rate: 0.0001
+  warmup_updates: 20
+  max_updates: 300
+  max_seconds: 1200
+  schedule_updates: 300
+  schedule_from_seconds: false
+  mix_history_every: 0
+  ema_decay: 0
+  validation_every: 300
+  validation_cases: 2048
+  save_every: 300
+  init_checkpoint: runs/S-2y/best.pt
+output_dir: runs/local/head-FL-30d

@@ -1,0 +1,44 @@
+# OutageFM encoder and heads (M size: 10 layers, width 512, 8 heads) and shared training settings.
+extends: ../weather.yaml
+model:
+  kind: outage_fm
+  maximum_horizon_steps: 672
+  width: 512
+  heads: 8
+  layers: 10
+  dropout: 0.1
+  patch_length: 16
+  neighbours: 32
+  neighbour_lag_steps: 4
+  neighbour_lags: 72
+  training_prefix_steps: [192, 672]   # alternate 48- and 168-hour target windows
+  point: mean
+training:
+  batch_size: 2048                    # per GPU; global batch 8,192 on 4 GPUs (see --global-batch-size)
+  gradient_accumulation: 1
+  workers: 1
+  learning_rate: 0.0003
+  backbone_learning_rate: 0.0003
+  weight_decay: 0.05
+  precision: bfloat16
+  max_updates: 100000
+  max_seconds: 4800
+  warmup_updates: 200
+  lr_schedule: cosine
+  schedule_updates: 6000
+  lr_floor_fraction: 0.1
+  validation_every: 250
+  validation_cases: 8192
+  validation_batch_size: 512
+  save_every: 250
+  gpu_input_cache: true
+  gpu_validation_cache: true
+pretraining:
+  windows_per_epoch: 1000000
+  history_steps: 1344
+  horizon_steps: 672
+  robust_history: false
+  disjoint_supervision: true
+  require_complete_targets: false
+evaluation:
+  batch_size: 256

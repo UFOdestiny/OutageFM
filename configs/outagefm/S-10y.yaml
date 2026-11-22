@@ -1,0 +1,10 @@
+# Ensemble member: S, ten weather years (2014-2023), no warnings. 15,658 updates.
+extends: S-2y-fixed.yaml
+foundation:
+  manifest_dir: datasets/manifests/foundation-v2-wall
+  adaptation_start: "2014-01-15"
+weather:
+  packed_dir: datasets/processed/gfs-county-forecasts/packed-wall
+training:
+  max_updates: 15658
+output_dir: runs/S-10y

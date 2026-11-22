@@ -1,0 +1,7 @@
+# Historical pretraining on 2014-2021 outage windows without weather (M backbone, 33.5M parameters).
+extends: base.yaml
+protocol: H
+training:
+  max_seconds: 5400
+  schedule_updates: 11000
+output_dir: runs/pretrain-M

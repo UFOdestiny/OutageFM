@@ -1,0 +1,17 @@
+# Dense marginal control (Appendix A.3): per-step exceedance head P(Y_t >= c) on the frozen S-10y-warn backbone,
+# trained like the risk head; window risks are then derived from the marginals only.
+extends: ../S-10y-warn.yaml
+model:
+  marginal_head: true
+training:
+  trainable_prefixes: [marginal_head.]
+  learning_rate: 0.0005
+  backbone_learning_rate: 0.0005
+  warmup_updates: 50
+  schedule_from_seconds: false
+  schedule_updates: 6000
+  max_seconds: 1000000
+  max_updates: 6000
+  selection_weights: {marginal_bce: 1.0}
+  init_checkpoint: runs/S-10y-warn/best.pt
+output_dir: runs/control/marginal-S-10y-warn

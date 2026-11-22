@@ -1,0 +1,7 @@
+# Evaluation of models adapted on GFS-period weather (S-gfs-warn).
+extends: 2y.yaml
+foundation:
+  manifest_dir: datasets/manifests/foundation-v2-w2021
+  adaptation_start: "2021-03-14"
+weather:
+  packed_dir: datasets/processed/gfs-county-forecasts/packed-w2021

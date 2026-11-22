@@ -1,0 +1,10 @@
+# Evaluation of models adapted on two weather years: 64 Gaussian-copula paths with a 12-hour correlation scale,
+# RMSE from the average of the nine quantiles (point: quantile_mean), MAE from the median.
+extends: ../outagefm/base.yaml
+evaluation:
+  batch_size: 256
+  shard_workers: 3
+  copula_samples: 64
+  copula_correlation_hours: 12
+model:
+  point: quantile_mean

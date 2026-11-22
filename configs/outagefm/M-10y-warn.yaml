@@ -1,0 +1,5 @@
+# Ensemble member: M, ten weather years, NWS warnings.
+extends: M-10y.yaml
+model:
+  warnings: datasets/processed/nws-warnings/packed
+output_dir: runs/M-10y-warn

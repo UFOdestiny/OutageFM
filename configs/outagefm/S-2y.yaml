@@ -1,0 +1,9 @@
+# OutageFM-S with two weather years (2022-2023), no NWS warnings: the "2 weather yrs" row of Table 2, the
+# initialization of the local-adaptation study and the backbone of the risk-head structure comparison.
+# Trained with a 3,000-second budget on 4 GPUs; the cosine length is fixed from the measured update rate.
+extends: adapt.yaml
+model: {width: 256, layers: 6, heads: 4}
+training:
+  schedule_from_seconds: true
+  init_checkpoint: runs/pretrain-S/best.pt
+output_dir: runs/S-2y

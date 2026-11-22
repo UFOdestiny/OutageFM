@@ -1,0 +1,14 @@
+# Ensemble member: M, ten weather years, no warnings. Cosine length 15,658 updates.
+extends: adapt.yaml
+foundation:
+  manifest_dir: datasets/manifests/foundation-v2-wall
+  adaptation_start: "2014-01-15"
+weather:
+  packed_dir: datasets/processed/gfs-county-forecasts/packed-wall
+training:
+  schedule_from_seconds: false
+  schedule_updates: 15658
+  max_seconds: 1000000
+  max_updates: 15658
+  init_checkpoint: runs/pretrain-M/best.pt
+output_dir: runs/M-10y

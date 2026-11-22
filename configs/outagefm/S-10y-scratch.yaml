@@ -1,0 +1,5 @@
+# Ensemble member: S, ten weather years, no warnings, no historical pretraining (random initialization).
+extends: S-10y.yaml
+training:
+  init_checkpoint: null
+output_dir: runs/S-10y-scratch

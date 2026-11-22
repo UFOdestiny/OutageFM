@@ -1,0 +1,7 @@
+# Historical pretraining of the S backbone (5.4M parameters); same 5,400-second budget, cosine length fixed from
+# the measured update rate after 300 updates.
+extends: pretrain-M.yaml
+model: {width: 256, layers: 6, heads: 4}
+training:
+  schedule_from_seconds: true
+output_dir: runs/pretrain-S

@@ -1,0 +1,4 @@
+# Historical pretraining of S without the count anchor (initialization of the no-anchor ablation).
+extends: ../pretrain-S.yaml
+model: {anchor: false}
+output_dir: runs/ablation/pretrain-S-noanchor

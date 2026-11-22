@@ -1,0 +1,17 @@
+# Weather-adaptation recipe shared by every member (Section 4.4, Appendix B.3): issued weather on adaptation
+# windows, one historical (weather-free, 2014-2021) batch every third update, raw-count pinball weighted by window
+# scale (alpha = 0), EMA 0.998, detached point head clipped separately. Not run directly.
+extends: base.yaml
+model:
+  point_delta: 1000.0
+  raw_scale_power: 0.0
+training:
+  learning_rate: 0.00015
+  backbone_learning_rate: 0.00015
+  warmup_updates: 100
+  max_seconds: 3000
+  schedule_updates: 6000
+  ema_decay: 0.998
+  selection_weights: {pinball_log: 1.0, pinball_raw: 0.5, event_bce: 0.5}
+  separate_clip_prefixes: [point_head.]
+  mix_history_every: 3

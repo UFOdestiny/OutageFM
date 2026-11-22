@@ -1,0 +1,31 @@
+# Private code, notes and paper (not part of the release)
+/baseline/
+/analysis/
+/visualization/
+/docs/
+/notes/
+/latex/
+/backup/
+/ccfa-workfiles/
+
+# Data, model weights and generated outputs (including symlinks)
+/datasets/
+/models/
+/runs/
+
+# Python caches
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ruff_cache/
+build/
+dist/
+
+# Local configuration and tools
+.env
+.venv*/
+.cache/
+.agents/
+.claude/
+.vscode/
+*.ses

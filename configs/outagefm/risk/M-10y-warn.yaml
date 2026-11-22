@@ -1,0 +1,18 @@
+# Risk head (nested cumulative hazard, Eq. 7) on the frozen M-10y-warn backbone: only hazard_head is trained,
+# 6,000 updates. Merge into the backbone with scripts/merge_risk_field.py.
+extends: ../M-10y-warn.yaml
+model:
+  hazard_head: true
+  hazard_structure: cumsum2d
+training:
+  trainable_prefixes: [hazard_head.]
+  learning_rate: 0.0005
+  backbone_learning_rate: 0.0005
+  warmup_updates: 50
+  schedule_from_seconds: false
+  schedule_updates: 6000
+  max_seconds: 1000000
+  max_updates: 6000
+  selection_weights: {hazard_bce: 1.0}
+  init_checkpoint: runs/M-10y-warn/best.pt
+output_dir: runs/risk/M-10y-warn

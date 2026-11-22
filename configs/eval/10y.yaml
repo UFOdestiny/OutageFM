@@ -1,0 +1,13 @@
+# Evaluation of models adapted on ten weather years.
+extends: 2y.yaml
+foundation:
+  manifest_dir: datasets/manifests/foundation-v2-wall
+  adaptation_start: "2014-01-15"
+weather:
+  packed_dir: datasets/processed/gfs-county-forecasts/packed-wall
+evaluation:
+  # The three weather stores hold identical 2024/2025 values, so members adapted on any of them can be scored here.
+  equivalent_packed_dirs:
+    - datasets/processed/gfs-county-forecasts/packed
+    - datasets/processed/gfs-county-forecasts/packed-w2021
+    - datasets/processed/gfs-county-forecasts/packed-wall

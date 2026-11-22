@@ -1,0 +1,20 @@
+# Local adaptation (Table 11): all parameters of S-2y updated on 7 days of 2024 origins in WA.
+extends: ../S-2y.yaml
+training:
+  train_split: geo_adapt-53-7days
+  batch_size: 32
+  gradient_accumulation: 1
+  learning_rate: 0.00003
+  backbone_learning_rate: 0.00003
+  warmup_updates: 20
+  max_updates: 300
+  max_seconds: 1200
+  schedule_updates: 300
+  schedule_from_seconds: false
+  mix_history_every: 0
+  ema_decay: 0
+  validation_every: 300
+  validation_cases: 2048
+  save_every: 300
+  init_checkpoint: runs/S-2y/best.pt
+output_dir: runs/local/full-WA-7d

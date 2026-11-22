@@ -1,0 +1,25 @@
+# Issued weather forecasts available before each origin (GEFSv12 reforecast, operational GEFS control, GFS),
+# mapped to nine county fields per forecast hour (Appendix B.2).
+extends: data.yaml
+protocol: F
+evaluation:
+  matmul_precision: high
+  save_predictions: false
+  save_development_predictions: true
+  progress_save_seconds: 120
+weather:
+  source_kind: archived_gfs
+  packed_dir: datasets/processed/gfs-county-forecasts/packed
+  features:
+    - temperature_2m_c
+    - relative_humidity_2m_pct
+    - wind_u_10m_ms
+    - wind_v_10m_ms
+    - wind_gust_ms
+    - precipitation_rate_mmh
+    - snow_depth_m
+    - categorical_snow
+    - categorical_freezing_rain
+  # Fixed physical-unit scaling; no test-period moments or outage labels fitted.
+  feature_center: [10, 50, 0, 0, 0, 0, 0, 0, 0]
+  feature_scale: [20, 30, 10, 10, 20, 5, 0.1, 1, 1]

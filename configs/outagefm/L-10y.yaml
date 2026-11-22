@@ -1,0 +1,6 @@
+# L backbone (103M parameters), ten weather years, no warnings (Appendix D.3; not in the ensemble).
+extends: M-10y.yaml
+model: {width: 768, layers: 14, heads: 12}
+training:
+  init_checkpoint: runs/pretrain-L/best.pt
+output_dir: runs/L-10y

@@ -1,0 +1,6 @@
+# Table 3, "No anchor": quantile and point heads predict log counts from zero instead of log(1 + y0).
+extends: ../S-10y-warn.yaml
+model: {anchor: false}
+training:
+  init_checkpoint: runs/ablation/pretrain-S-noanchor/best.pt
+output_dir: runs/ablation/S-10y-warn-noanchor

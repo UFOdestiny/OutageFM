@@ -1,0 +1,3 @@
+# Evaluation of the six-member OutageFM ensemble (comma-separated checkpoints): member quantiles averaged in
+# count space, event probabilities averaged.
+extends: 10y.yaml

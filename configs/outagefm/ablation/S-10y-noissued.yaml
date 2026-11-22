@@ -1,0 +1,5 @@
+# Table 3, "No issued forecasts": issued weather (values and availability) zeroed in training and evaluation,
+# and no NWS warnings.
+extends: ../S-10y.yaml
+model: {drop_weather: true}
+output_dir: runs/ablation/S-10y-noissued

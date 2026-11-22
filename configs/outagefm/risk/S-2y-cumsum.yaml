@@ -1,0 +1,17 @@
+# Risk-head structure comparison on the frozen S-2y backbone (Section 4.3, Appendices A.5 and C.3): double cumulative sum of Eq. 7, the structure used by OutageFM.
+extends: ../S-2y.yaml
+model:
+  hazard_head: true
+  hazard_structure: cumsum2d
+training:
+  trainable_prefixes: [hazard_head.]
+  learning_rate: 0.0005
+  backbone_learning_rate: 0.0005
+  warmup_updates: 50
+  max_seconds: 1000000
+  selection_weights: {hazard_bce: 1.0}
+  schedule_from_seconds: false
+  schedule_updates: 6000
+  max_updates: 6000
+  init_checkpoint: runs/S-2y/best.pt
+output_dir: runs/risk/S-2y-cumsum

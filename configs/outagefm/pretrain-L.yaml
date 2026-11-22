@@ -1,0 +1,10 @@
+# Historical pretraining of the L backbone (103M parameters; not in the ensemble): same global batch
+# (1,024 x 2 accumulation x 4 GPUs), twice the wall-clock budget.
+extends: pretrain-M.yaml
+model: {width: 768, layers: 14, heads: 12}
+training:
+  batch_size: 1024
+  gradient_accumulation: 2
+  max_seconds: 10800
+  schedule_from_seconds: true
+output_dir: runs/pretrain-L

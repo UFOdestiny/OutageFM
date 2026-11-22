@@ -1,0 +1,10 @@
+# Ensemble member: S, issued weather from the GFS period only (March 2021-2023), NWS warnings.
+extends: S-2y-fixed.yaml
+foundation:
+  manifest_dir: datasets/manifests/foundation-v2-w2021
+  adaptation_start: "2021-03-14"
+weather:
+  packed_dir: datasets/processed/gfs-county-forecasts/packed-w2021
+model:
+  warnings: datasets/processed/nws-warnings/packed
+output_dir: runs/S-gfs-warn

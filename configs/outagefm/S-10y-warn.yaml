@@ -1,0 +1,5 @@
+# OutageFM-S: S, ten weather years, NWS warnings. Ensemble member and the reference of all ablations.
+extends: S-10y.yaml
+model:
+  warnings: datasets/processed/nws-warnings/packed
+output_dir: runs/S-10y-warn

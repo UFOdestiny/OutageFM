@@ -1,0 +1,17 @@
+# Learned joint-model control (Appendix A.3): noise-driven trajectory generator on the frozen OutageFM-S backbone,
+# trained with the energy score on anchored log-count paths (8 samples per window) like the risk head.
+extends: ../S-10y-warn.yaml
+model:
+  trajectory_head: {noise: 32, patch_noise: 8, samples: 8}
+training:
+  trainable_prefixes: [trajectory_]
+  learning_rate: 0.0005
+  backbone_learning_rate: 0.0005
+  warmup_updates: 50
+  schedule_from_seconds: false
+  schedule_updates: 6000
+  max_seconds: 1000000
+  max_updates: 6000
+  selection_weights: {trajectory_es: 1.0}
+  init_checkpoint: runs/S-10y-warn/best.pt
+output_dir: runs/control/trajectory-S-10y-warn

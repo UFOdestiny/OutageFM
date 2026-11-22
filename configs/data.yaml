@@ -1,0 +1,86 @@
+# EAGLE-I county panel, forecast windows and the frozen temporal/geographic splits (Section 5.1, Appendix B.1).
+# The `data` and `foundation` sections must match the summary.json of the built manifests exactly.
+seed: 42
+protocol: H
+data:
+  raw_dir: datasets/raw/eaglei-v4
+  panel_dir: datasets/processed/foundation-v2
+  years: [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
+  start: '2014-01-01'
+  end: '2026-01-01'
+  interval_minutes: 15
+  observation_protocol: sparse_zero_reconstruction
+  invalid_count_policy: exclude_windows
+  timestamp_policy: ceil_to_next_grid
+  geography: true
+  chunk_rows: 500000
+  county_registry: datasets/metadata/foundation-v2/counties.parquet
+  quarantine_dir: datasets/processed/foundation-v2/quarantine
+windows:
+  manifest_dir: datasets/manifests/foundation-v2/h48
+  history_steps: 1344
+  horizon_steps: 192
+  stride_steps: 96
+  region_size: 16
+  holdout_states: ['08', '12', '26', '36', '53']
+  splits:
+    train: {start: '2022-01-01', end: '2024-01-01'}
+    validation: {start: '2024-01-01', end: '2025-01-01'}
+    test: {start: '2025-01-01', end: '2026-01-01'}
+  validity_scope: county
+foundation:
+  workdir: datasets/provenance/foundation-v2
+  manifest_dir: datasets/manifests/foundation-v2
+  seed: 42
+  pretraining_start: '2014-01-01'
+  pretraining_end: '2024-01-01'
+  robust_history_start: '2018-01-01'
+  # Weather adaptation windows start here (2022: two weather years; see the 10y and gfs variants).
+  adaptation_start: '2022-01-01'
+  adaptation_end: '2024-01-01'
+  validation_start: '2024-01-01'
+  validation_end: '2025-01-01'
+  test_start: '2025-01-01'
+  test_end: '2026-01-01'
+  geographic_development_states: ['08']              # Colorado
+  geographic_test_states: ['12', '26', '36', '53']   # Florida, Michigan, New York, Washington
+  horizons_hours: [6, 24, 48, 168]
+  context_steps: 1344
+  stride_steps: 96
+  unavailable_history_fraction_max: 0.05
+  unavailable_target_fraction_max: 0.20
+  assumed_zero_reconstruction_weight: 0.25
+  event_threshold_customers: 800
+  event_minimum_duration_steps: 24
+  near_boundary_purge_days: 21
+  adaptation_days_in_geographic_holdouts: [7, 30, 90]
+weather:
+  features: []
+model:
+  # Defaults inherited by baseline configs; OutageFM sets its own model section (outagefm/base.yaml).
+  width: 1024
+  heads: 16
+  dropout: 0.0
+training:
+  batch_size: 4
+  workers: 4
+  max_updates: 25000
+  max_seconds: 6000
+  learning_rate: 0.0001
+  warmup_updates: 500
+  weight_decay: 0.01
+  precision: bfloat16
+  validation_every: 500
+  gradient_accumulation: 1
+  clip_grad_norm: 1.0
+  ema_decay: 0.999
+  freeze_encoder: false
+  fewshot_fraction: 1.0
+pretraining: {}
+evaluation:
+  samples: 64
+  batch_size: 4
+  quantiles: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+  save_predictions: true
+  max_batches: null
+  event_threshold: 800
